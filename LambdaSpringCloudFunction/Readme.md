@@ -22,3 +22,25 @@ also implement same Request and response type in the Function implemetation clas
         }
     }
 
+Don't forget to add plugin to build light weight jar for lambda
+
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot.experimental</groupId>
+                <artifactId>spring-boot-thin-layout</artifactId>
+                <version>1.0.10.RELEASE</version>
+            </dependency>
+        </dependencies>
+    </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <configuration>
+            <createDependencyReducedPom>false</createDependencyReducedPom>
+            <shadedArtifactAttached>false</shadedArtifactAttached>
+            <shadedClassifierName>aws</shadedClassifierName>
+        </configuration>
+    </plugin>
