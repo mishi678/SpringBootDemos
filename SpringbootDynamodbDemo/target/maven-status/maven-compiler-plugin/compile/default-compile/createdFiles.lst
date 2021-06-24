@@ -1,5 +1,0 @@
-com\javatechiue\aws\entity\Address.class
-com\javatechiue\aws\config\DynamoDBConfig.class
-com\javatechiue\aws\entity\Person.class
-com\javatechiue\aws\repository\PersonRepository.class
-com\javatechiue\aws\SpringbootDynamodbExampleApplication.class
